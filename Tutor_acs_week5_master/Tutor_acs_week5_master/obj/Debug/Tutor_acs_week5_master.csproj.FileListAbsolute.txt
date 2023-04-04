@@ -1,0 +1,12 @@
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\bin\Debug\Tutor_acs_week5_master.exe.config
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\bin\Debug\Tutor_acs_week5_master.exe
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\bin\Debug\Tutor_acs_week5_master.pdb
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.csprojAssemblyReference.cache
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.Form1.resources
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.MasterSupplier.resources
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.Properties.Resources.resources
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.csproj.GenerateResource.cache
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.csproj.CoreCompileInputs.cache
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.exe
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.pdb
+C:\1.KULIAH\SISTEM_INFORMASI_BISNIS_ENRICO\SEMESTER_6\Astep\sm6\ACS\Soal\Tutor_Client_Server\Tutor_acs_week5_master\Tutor_acs_week5_master\obj\Debug\Tutor_acs_week5_master.DetailSupplier.resources
