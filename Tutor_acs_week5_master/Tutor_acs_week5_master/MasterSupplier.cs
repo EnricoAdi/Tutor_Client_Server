@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient; //Jangan lupa import ini
 
 using Tutor_acs_week5_master.Model; //ini gunanya untuk ngeimport semua module yang ada di folder "model" supaya nanti class2nya bisa kita pakai di sini
 namespace Tutor_acs_week5_master
@@ -24,7 +25,12 @@ namespace Tutor_acs_week5_master
             //konsepnya, sql command akan ditaruh semua di class supplier, jadi di sini codenya bersih hanya untuk mengontrol action di dalam form saja
 
 
-            DataTable dtSupplier = Supplier.fetch(); //ini nanti si method fetch untuk ngembaliin datatable sebagai source buat datagridviewnya.
+            //DataTable dtSupplier = Supplier.fetch(); //ini nanti si method fetch untuk ngembaliin datatable sebagai source buat datagridviewnya.
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM SUPPLIER order by ID desc", DB.conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dtSupplier = new DataTable();
+            adapter.Fill(dtSupplier);
 
             dataGridView1.DataSource = null; //untuk menghindari error, kita bisa nge-null kan dulu datasourcenya
             dataGridView1.DataSource = dtSupplier; //baru diset dengan datatable yang tadi
@@ -42,16 +48,17 @@ namespace Tutor_acs_week5_master
             string notel = txtNoTelp.Text ;
             string email = txtEmail.Text ;
             string alamat = txtAlamat.Text ;
-            Supplier s = new Supplier();
-            s.NAMA = nama;
-            s.NO_TELP = notel;
-            s.ALAMAT = alamat;
-            s.EMAIL = email;
+            //Supplier s = new Supplier();
+            //s.NAMA = nama;
+            //s.NO_TELP = notel;
+            //s.ALAMAT = alamat;
+            //s.EMAIL = email;
             try
-            { 
-                s.insert();
+            {
+                //s.insert();
+                Supplier.insertWithParams(nama, alamat, email, notel);
                 MessageBox.Show("Berhasil insert data supplier baru"); 
-                MasterSupplier_Load(sender, e);
+                MasterSupplier_Load(null, null);
             }
             catch (Exception exc)
             {
@@ -76,14 +83,17 @@ namespace Tutor_acs_week5_master
             int index = e.RowIndex;
             Supplier s = new Supplier();
             //ini kalau mau pakai constructor buat ngisi propertiesnya bisa, tapi di sini kondisinya aku langsung ngisi propertiesnya :)
-            s.ID = Int32.Parse(dataGridView1.Rows[index].Cells["ID"].Value.ToString());
-            s.KODE = dataGridView1.Rows[index].Cells["KODE"].Value.ToString();
-            s.NAMA = dataGridView1.Rows[index].Cells["NAMA"].Value.ToString();
-            s.ALAMAT = dataGridView1.Rows[index].Cells["ALAMAT"].Value.ToString();
-            s.EMAIL = dataGridView1.Rows[index].Cells["EMAIL"].Value.ToString();
-            s.NO_TELP = dataGridView1.Rows[index].Cells["NO_TELP"].Value.ToString(); 
-            DetailSupplier ds = new DetailSupplier(this, s);
-            ds.ShowDialog();
+            if (index > -1)
+            { 
+                s.ID = Int32.Parse(dataGridView1.Rows[index].Cells["ID"].Value.ToString());
+                s.KODE = dataGridView1.Rows[index].Cells["kode"].Value.ToString();
+                s.NAMA = dataGridView1.Rows[index].Cells["NAMA"].Value.ToString();
+                s.ALAMAT = dataGridView1.Rows[index].Cells["ALAMAT"].Value.ToString();
+                s.EMAIL = dataGridView1.Rows[index].Cells["EMAIL"].Value.ToString();
+                s.NO_TELP = dataGridView1.Rows[index].Cells["NO_TELP"].Value.ToString(); 
+                DetailSupplier ds = new DetailSupplier(this, s);
+                ds.ShowDialog();
+            }
         }
     }
 }

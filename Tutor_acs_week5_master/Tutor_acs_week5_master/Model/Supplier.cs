@@ -39,7 +39,17 @@ namespace Tutor_acs_week5_master.Model
             int posisiSpasi = Int32.Parse(cmd1.ExecuteScalar().ToString());
             int jmlHuruf = posisiSpasi == 0 ? 1 : 2; //ini shorthand if untuk mengisi variabel jmlHuruf, yang nantinya diisi 1 kalau posisi spasi 0, dan diisi 2 kalau posisi spasi lebih dari 0
             //maksudnya, ini aku mau cari tau berapa banyak kata dari posisi spasi
-            DB.closeConnection();
+
+            //atau
+            //if (posisiSpasi == 0)
+            //{
+            //    jmlHuruf = 1;
+            //}
+            //else
+            //{
+            //    jmlHuruf = 2;
+            //}
+            //DB.closeConnection();
 
             if (jmlHuruf == 1)
             {
@@ -78,6 +88,32 @@ namespace Tutor_acs_week5_master.Model
 
             //untuk hindari SQL INJECTION, kita bisa pakai parameter sql 
             
+
+            DB.openConnection();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+            DB.closeConnection();
+        }
+        public static void insertWithParams(string nama, string alamat, string email, string notelp)
+        {
+
+            Tuple<int, string> newData = getNewIDandKode(nama);
+            SqlCommand cmd = new SqlCommand("INSERT INTO SUPPLIER VALUES(@id,@kode,@nama,@alamat,@email,@notelp)", DB.conn);
+            cmd.Parameters.AddWithValue("@id", newData.Item1);
+            cmd.Parameters.AddWithValue("@kode", newData.Item2);
+            cmd.Parameters.AddWithValue("@nama", nama);
+            cmd.Parameters.AddWithValue("@alamat", alamat);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@notelp", notelp);
+
+            //untuk hindari SQL INJECTION, kita bisa pakai parameter sql 
+
 
             DB.openConnection();
             try

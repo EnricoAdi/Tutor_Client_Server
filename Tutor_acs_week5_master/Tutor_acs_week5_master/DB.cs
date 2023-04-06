@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
 using System.Data.SqlClient; //import ini untuk mengakses command sql
-
+using System.Data;
 namespace Tutor_acs_week5_master
 {
     class DB
@@ -18,7 +18,7 @@ namespace Tutor_acs_week5_master
             try
             {
                 
-                connString = $"Data Source=.;Initial Catalog={NAMADB};User ID={username};Password={password}";
+                connString = $"Data Source=.;Initial Catalog={NAMADB};User ID={username};Password={password}"; 
                 //connection string ini digunakan semacam identitas pengenal buat connect ke database
                 //string yang ada dollarnya ($) ini untuk interpolation string, silahkan cari sendiri apa itu :)
 
@@ -36,7 +36,7 @@ namespace Tutor_acs_week5_master
         //funcion2 ini dibuat static 
         public static void openConnection()
         {
-            if (conn.State == System.Data.ConnectionState.Open)
+            if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
             }
