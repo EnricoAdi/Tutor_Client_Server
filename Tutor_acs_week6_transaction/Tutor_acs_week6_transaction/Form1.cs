@@ -51,15 +51,15 @@ namespace Tutor_acs_week6_transaction
             FormCariBahan f = new FormCariBahan(this);
             f.ShowDialog();
             
-        }
-        public void getAddedItem(int id, string kode, string merk, int maxQty)
-        {
-            //dataCart.Rows.Add(r);
-            txtKode.Text = kode;
-            lblNama.Text = merk;
-            numericUpDown1.Maximum = maxQty;
-            bindDataSet();
-        }
+            }
+            public void getAddedItem(int id, string kode, string merk, int maxQty)
+            {
+                //dataCart.Rows.Add(r);
+                txtKode.Text = kode;
+                lblNama.Text = merk;
+                numericUpDown1.Maximum = maxQty;
+                bindDataSet();
+            }
         void bindDataSet()
         {
             dataGridView1.DataSource = null;
